@@ -1,6 +1,6 @@
 services:
   backend:
-    build: ./backend
+    image: ${DOCKER_USERNAME}/invoice-backend:latest
     container_name: invoice-backend
     restart: always
     ports:
@@ -13,7 +13,7 @@ services:
       - invoice-network
 
   frontend:
-    build: ./frontend
+    image: ${DOCKER_USERNAME}/invoice-frontend:latest
     container_name: invoice-frontend
     restart: always
     ports:

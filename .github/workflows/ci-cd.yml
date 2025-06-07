@@ -92,7 +92,10 @@ jobs:
         host: ${{ secrets.SERVER_HOST }}
         username: ${{ secrets.SERVER_USERNAME }}
         key: ${{ secrets.SERVER_SSH_KEY }}
+        envs: DOCKER_USERNAME
         script: |
           cd /home/ec2-user
+          export DOCKER_USERNAME=${{ secrets.DOCKER_USERNAME }}
+          echo "DOCKER_USERNAME=${{ secrets.DOCKER_USERNAME }}" > .env
           docker-compose pull
           docker-compose up -d
