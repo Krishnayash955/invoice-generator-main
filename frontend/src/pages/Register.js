@@ -131,7 +131,7 @@ const Register = () => {
             </Col>
           </Row>
 
-          <h5 className="mb-3 mt-4">Company Information (Optional)</h5>
+          <h5 className="mb-3 mt-4">Company Information</h5>
           <Form.Group className="mb-3" controlId="companyName">
             <Form.Label>Company Name</Form.Label>
             <Form.Control
